@@ -11,7 +11,7 @@ Este repositorio está destinado a almacenar los proyectos realizados durante la
 
 * Cevallos Michael
 
-* Espinoza Jhaon
+* Espinoza Jhon
 
 * Lara Andrés
 
