@@ -75,7 +75,8 @@ class MainActivity : ComponentActivity() {
     }
 }
 val greatVibesFont = FontFamily(
-    Font(R.font.vibes) // asegúrate que el nombre coincida con tu archivo .ttf
+    //el archivo esta en font mas sencillo de implementar, se puede implementar con google fonts
+    Font(R.font.vibes)
 )
 
 
@@ -115,21 +116,19 @@ fun InvitationCard() {
         .fillMaxWidth()
         .height(200.dp)
 
-
-    // Imagen de fondo
     Box(
         modifier = Modifier
             .fillMaxSize()
     ) {
         Image(
-            painter = painterResource(id = R.drawable.fondoinv), // reemplaza con tu imagen
+            painter = painterResource(id = R.drawable.fondoinv),
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
 
         Surface(
-            color = MaterialTheme.colorScheme.surface.copy(alpha = 0.40f), // superficie semitransparente
+            color = MaterialTheme.colorScheme.surface.copy(alpha = 0.40f),
             modifier = Modifier.fillMaxSize()
         ) {
             Column(
@@ -168,7 +167,7 @@ fun InvitationCard() {
                     }
                 )
 
-                // InfoRow 2: Fecha y hora con apertura de calendario
+                // Redireccion para agendar el evento
                 InfoRow(
                     icon = Icons.Default.DateRange,
                     text = "Sábado 25 de Mayo, 18:00",
@@ -184,23 +183,23 @@ fun InvitationCard() {
                     }
                 )
 
-                // InfoRow 3: Web
+                // Pagina Eventos Marriot
                 InfoRow(
                     icon = Icons.Default.Share,
-                    text = "Sitio Web de contacto",
+                    text = "Confirma tu Asistencia",
                     onClick = {
-                        val urlIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ejemplo.com"))
+                        val urlIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.marriott.com/es/hotels/uiodt-jw-marriott-hotel-quito/events/"))
                         context.startActivity(urlIntent)
                     }
                 )
 
-                // InfoRow 4: Email
+                // Solo Info Mail
                 InfoRow(
                     icon = Icons.Default.Email,
-                    text = "contacto@ejemplo.com",
+                    text = "JayAlexanderUCE@gmail.com",
                     onClick = {
                         val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
-                            data = Uri.parse("mailto:contacto@ejemplo.com")
+                            data = Uri.parse("JayAlexanderUCE@gmail.com")
                         }
                         context.startActivity(emailIntent)
                     }
