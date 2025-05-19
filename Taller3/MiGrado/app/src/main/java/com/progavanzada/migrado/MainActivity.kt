@@ -44,6 +44,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -110,7 +111,7 @@ fun SaludoText(message:String,from:String,modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun InvitationCard() {
+fun CartaInvitacion() {
     val context = LocalContext.current
     val imageModifier = Modifier
         .fillMaxWidth()
@@ -154,11 +155,23 @@ fun InvitationCard() {
 
                     )
                 }
+                Text(
+                    text = "De Jay Alexander",
+                    fontFamily = greatVibesFont,
+                    fontSize = 25.sp,
+                    style = MaterialTheme.typography.bodyLarge.copy(
+                        color = Color.Black,
+                        fontWeight = FontWeight.Medium
+                    ),
+                    modifier = Modifier
+                        .padding(top = 8.dp, bottom = 16.dp)
+                        .align(Alignment.CenterHorizontally)
+                )
 
                 Spacer(modifier = Modifier.height(16.dp))
 
                 // InfoRow 1: Dirección
-                InfoRow(
+                ColumnaIcono(
                     icon = Icons.Default.Place,
                     text = "Av. Francisco de Orellana 1172 Y Amazonas",
                     onClick = {
@@ -168,7 +181,7 @@ fun InvitationCard() {
                 )
 
                 // Redireccion para agendar el evento
-                InfoRow(
+                ColumnaIcono(
                     icon = Icons.Default.DateRange,
                     text = "Sábado 25 de Mayo, 18:00",
                     onClick = {
@@ -184,7 +197,7 @@ fun InvitationCard() {
                 )
 
                 // Pagina Eventos Marriot
-                InfoRow(
+                ColumnaIcono(
                     icon = Icons.Default.Share,
                     text = "Confirma tu Asistencia",
                     onClick = {
@@ -194,7 +207,7 @@ fun InvitationCard() {
                 )
 
                 // Solo Info Mail
-                InfoRow(
+                ColumnaIcono(
                     icon = Icons.Default.Email,
                     text = "JayAlexanderUCE@gmail.com",
                     onClick = {
@@ -206,7 +219,7 @@ fun InvitationCard() {
                 )
 
                 // InfoRow 5: Teléfono
-                InfoRow(
+                ColumnaIcono(
                     icon = Icons.Default.Phone,
                     text = "+593987654321",
                     onClick = {
@@ -222,7 +235,7 @@ fun InvitationCard() {
 }
 
 @Composable
-fun InfoRow(icon: ImageVector, text: String, onClick: (() -> Unit)?) {
+fun ColumnaIcono(icon: ImageVector, text: String, onClick: (() -> Unit)?) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
@@ -255,5 +268,5 @@ fun GreetingPreview() {
 //        SaludoText(message = "Te Invito a Mi Grado ", from = "De Andres")
    // }
 
-    InvitationCard()
+    CartaInvitacion()
 }
