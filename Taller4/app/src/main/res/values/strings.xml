@@ -1,0 +1,9 @@
+<resources>
+        <string name="app_name">OpenPdfApp</string>
+        <string name="logo_content_desc">Logo del Grupo</string>
+        <string name="username_hint">Ingresa tu nombre</string>
+        <string name="login_button">Ingresar y Abrir PDF</string>
+        <string name="welcome_message">¡Hola, %1$s!</string>
+        <string name="welcome_message_first_time">¡Bienvenido, %1$s! Ingresaste el %2$s</string>
+        <string name="welcome_back_message">¡Bienvenido de nuevo, %1$s! Último ingreso: %2$s</string>
+</resources>
