@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-concesionaria-staging-f766d-authRole",
+      "UnauthRoleArn": "arn:aws:iam::544591132427:role/amplify-concesionaria-staging-f766d-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::544591132427:role/amplify-concesionaria-staging-f766d-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-concesionaria-staging-f766d-deployment",
+      "UnauthRoleName": "amplify-concesionaria-staging-f766d-unauthRole",
+      "StackName": "amplify-concesionaria-staging-f766d",
+      "StackId": "arn:aws:cloudformation:us-east-1:544591132427:stack/amplify-concesionaria-staging-f766d/a001af70-4cd7-11f0-ad39-0e40cd111649",
+      "AmplifyAppId": "d1a67i2169dsmd"
+    }
+  }
+}
